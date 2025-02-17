@@ -183,6 +183,13 @@ Use the compiler option -Werror to treat warnings as errors. This applies to bui
 
 Exceptions to Werror have to be approved by the module owner and have their rationale documented. Exceptions should disable errors, but leave warnings intact (-wno-error=some-kind-of-warning) unless the warning is so noisy as flood build output. In that case, it should be disabled entirely (-wno-some-kind-of-warning).
 
+### 3.1.6 Relax warning as errors ONLY on TAGs (Recommended)
+
+While previous chapter is worth respecting, there is an exception that may be considered.
+To improve adoption of the delivered software, maintainers should take into account that soon or later the user may have a stricter configuration (eg: toolchain change)
+that would trigger new errors that were not trapped during the development phase, this could be blocking or at best just annoying.
+Practically release manager just need commit a change that remove -Werror before tagging a release, and revert that commit just after to minimize that window.
+
 ## 3.2 Preprocessor ##
 
 ### 3.2.1 Use header file guards (Required) ###
