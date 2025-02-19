@@ -518,7 +518,7 @@ There will be functions that will not return `sl_status_t`. For example, functio
 
 In any case, the following requirements must be complied with:
 
-- if a function can fail, there must be a clear indication as to how to detect a failure. This is preferrably done through returning `sl_status`, but having a special 'invalid' value returned in case of failure is also allowed. No matter how this is achieved, it must be documented in the doxygen function header.
+- if a function can fail, there must be a clear indication as to how to detect a failure. This is preferably done through returning `sl_status`, but having a special 'invalid' value returned in case of failure is also allowed. No matter how this is achieved, it must be documented in the doxygen function header.
 - `bool` must not be returned to indicate success or failure. `bool` should only be used to indicate if a given condition is true or false. Even then, using an `enum` should be considered for future-proofing the function, should it need to return more than a true/false value in the future.
 
 __Example__
@@ -1425,7 +1425,7 @@ __Example__
 
 #### 4.6.4.5 Functions/stubs called on specific events/callbacks should start 'on' in their name (Required) ####
 
-Whenever a function is called to indicate an event occurred, or is called in 'reaction' to an event happenning, this function should have `on` in its name, directly after the `<module>_` prefix. This also applies to callbacks or function stubs shipped to the user.
+Whenever a function is called to indicate an event occurred, or is called in 'reaction' to an event happening, this function should have `on` in its name, directly after the `<module>_` prefix. This also applies to callbacks or function stubs shipped to the user.
 
 __Example__
     void sl_usb_on_device_connection(void);
@@ -1616,7 +1616,7 @@ Write documentation so that others can easily pick up the code. It makes life ea
 
 ## 5.2 Comments should answer the question "Why?" (Required) ##
 
-Write comments that say why the code is the way it is. What the code does, and how it does it, can usually be figured out from the code itself. Why it does it, and why it does it the way that it does, cannot. If you write it the  bvious way, and it doesn't work, explain in a comment why it didn't. Otherwise the next person to come along is going to convert it back to the obvious method and have to learn the same painful lesson (or even worse, force you to relearn it).
+Write comments that say why the code is the way it is. What the code does, and how it does it, can usually be figured out from the code itself. Why it does it, and why it does it the way that it does, cannot. If you write it the obvious way, and it doesn't work, explain in a comment why it didn't. Otherwise the next person to come along is going to convert it back to the obvious method and have to learn the same painful lesson (or even worse, force you to relearn it).
 
 There needs to be enough documentation that a peer can read and understand the code without having to ask the author for explanations. If a code reviewer feels the need to ask for explanations about how stuff works, then the code  author should add this additional information as comments in the code.
 
