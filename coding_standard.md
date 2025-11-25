@@ -889,9 +889,16 @@ __Example__
       #endif
     }
 
-### 4.1.3 Lines should not be longer than 80 characters (Recommended) ###
+### 4.1.3 Lines should not be longer than 100 characters (Recommended) ###
 
-We enforce an 80 characters limit per line of source code. This lets people set up their editors such that they can have multiple editors side-by-side. Although 80 characters are little by modern standards, it mixes well with existing code.
+We enforce a 100 character limit per line of source code, which aligns with modern Linux community standards. While the traditional 80-character limit was designed for terminal displays and side-by-side editor layouts, modern IDEs and high-resolution displays make 100 characters a practical choice that maintains readability while allowing for more expressive code.
+
+This limit:
+- Provides sufficient space for meaningful variable names and expressions
+- Works well with modern development tools and high-DPI displays
+- Maintains compatibility with side-by-side editor layouts
+- Follows the trend of many modern open-source projects
+- Balances readability with practical development needs
 
 ### 4.1.4 Line endings (Required) ###
 
